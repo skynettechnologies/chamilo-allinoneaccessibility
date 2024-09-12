@@ -29,3 +29,4 @@ $form->addElement('header', '<script src="'.$plugin_info['directory'].'javascrip
 //display form
 $plugin_info['settings_form'] = $form;
 
+ 
