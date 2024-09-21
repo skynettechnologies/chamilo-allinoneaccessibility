@@ -34,6 +34,25 @@ English (USA), English (UK), English (Australian), English (Canadian), English (
 
 This plugin has been made to be added in the header_center region.
 
+## Content Security Policy (CSP) Configuration
+
+If your platform has a strict Content Security Policy, you need to make exceptions for the external resources required by this plugin. Below is the recommended configuration.
+
+### PHP Configuration
+
+Add the following lines to your PHP configuration:
+
+```php
+$_configuration['security_content_policy'] = "
+    default-src 'self';
+    script-src 'self' *.skynettechnologies.com;
+    style-src 'self' *.skynettechnologies.com;
+    img-src 'self' *.skynettechnologies.com data:;
+";
+
+// Apply the CSP by sending the header
+header('Content-Security-Policy: ' . $_configuration['security_content_policy']);
+```
 
 ## Screenshots
 
