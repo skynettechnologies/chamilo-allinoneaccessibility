@@ -1,6 +1,18 @@
 <?php
+/**
+ * @package chamilo.plugin.hello_world
+ */
 
-$_template['show_message'] = false;
+// See also the share_user_info plugin
 
-echo '<script id="aioa-adawidget" src="https://www.skynettechnologies.com/accessibility/js/all-in-one-accessibility-js-widget-minify.js?aioa_reg_req=true&colorcode=&token=&position=bottom_right"></script>
-';
+echo '<div class="well">';
+if (!empty($plugin_info['settings']['hello_world_show_type'])) {
+    echo "<h2>".$plugin_info['settings']['hello_world_show_type']."</h2>";
+} else {
+    echo "<h2>Hello world</h2>";
+}
+
+//Using get_lang inside a plugin
+echo get_lang('HelloPlugin');
+
+echo '</div>';
