@@ -14,6 +14,7 @@ $domain = api_get_path(WEB_PATH);
     <title>Chamilo</title>
     <meta name="description" content="Chamilo" />
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="../../web/assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"> -->
     <link href="css/style.css?4=8" rel="stylesheet">
 </head>
 
@@ -262,7 +263,7 @@ $domain = api_get_path(WEB_PATH);
                                                             <input type="radio" id="edit-type-1" checked="" name="aioa_icon_type"
                                                                 value="aioa-icon-type-1" class="form-radio" />
                                                             <label for="edit-type-1" class="option">
-                                                                <img src="https://www.skynettechnologies.com/sites/default/files/aioa-icon-type-1.svg"
+                                                                <img src="images/icons/aioa-icon-type-1.svg"
                                                                     width="65" height="65" style="height: 65px;" />
                                                                 <span class="visually-hidden">Type 1</span>
                                                             </label>
@@ -274,7 +275,7 @@ $domain = api_get_path(WEB_PATH);
                                                             <input type="radio" id="edit-type-2" name="aioa_icon_type" value="aioa-icon-type-2"
                                                                 class="form-radio" />
                                                             <label for="edit-type-2" class="option">
-                                                                <img src="https://www.skynettechnologies.com/sites/default/files/aioa-icon-type-2.svg"
+                                                                <img src="images/icons/aioa-icon-type-2.svg"
                                                                     width="65" height="65" style="height: 65px;" />
                                                                 <span class="visually-hidden">Type 2</span>
                                                             </label>
@@ -286,7 +287,7 @@ $domain = api_get_path(WEB_PATH);
                                                             <input type="radio" id="edit-type-3" name="aioa_icon_type" value="aioa-icon-type-3"
                                                                 class="form-radio" />
                                                             <label for="edit-type-3" class="option">
-                                                                <img src="https://www.skynettechnologies.com/sites/default/files/aioa-icon-type-3.svg"
+                                                                <img src="images/icons/aioa-icon-type-3.svg"
                                                                     width="65" height="65" style="height: 65px;" />
                                                                 <span class="visually-hidden">Type 3</span>
                                                             </label>
@@ -299,7 +300,7 @@ $domain = api_get_path(WEB_PATH);
                                                             <input type="radio" id="edit-type-4" name="aioa_icon_type" value="aioa-icon-type-4"
                                                                 class="form-radio" />
                                                             <label for="edit-type-4" class="option">
-                                                                <img src="https://www.skynettechnologies.com/sites/default/files/aioa-icon-type-4.svg"
+                                                                <img src="images/icons/aioa-icon-type-4.svg"
                                                                     width="65" height="65" style="height: 65px;" />
                                                                 <span class="visually-hidden">Type 4</span>
                                                             </label>
@@ -311,7 +312,7 @@ $domain = api_get_path(WEB_PATH);
                                                             <input type="radio" id="edit-type-5" name="aioa_icon_type" value="aioa-icon-type-5"
                                                                 class="form-radio" />
                                                             <label for="edit-type-5" class="option">
-                                                                <img src="https://www.skynettechnologies.com/sites/default/files/aioa-icon-type-5.svg"
+                                                                <img src="images/icons/aioa-icon-type-5.svg"
                                                                     width="65" height="65" style="height: 65px;" />
                                                                 <span class="visually-hidden">Type 5</span>
                                                             </label>
@@ -323,7 +324,7 @@ $domain = api_get_path(WEB_PATH);
                                                             <input type="radio" id="edit-type-6" name="aioa_icon_type" value="aioa-icon-type-6"
                                                                 class="form-radio" />
                                                             <label for="edit-type-6" class="option">
-                                                                <img src="https://www.skynettechnologies.com/sites/default/files/aioa-icon-type-6.svg"
+                                                                <img src="images/icons/aioa-icon-type-6.svg"
                                                                     width="65" height="65" style="height: 65px;" />
                                                                 <span class="visually-hidden">Type 6</span>
                                                             </label>
@@ -335,7 +336,7 @@ $domain = api_get_path(WEB_PATH);
                                                             <input type="radio" id="edit-type-7" name="aioa_icon_type" value="aioa-icon-type-7"
                                                                 class="form-radio" />
                                                             <label for="edit-type-7" class="option">
-                                                                <img src="https://www.skynettechnologies.com/sites/default/files/aioa-icon-type-7.svg"
+                                                                <img src="images/icons/aioa-icon-type-7.svg"
                                                                     width="65" height="65" style="height: 65px;" />
                                                                 <span class="visually-hidden">Type 7</span>
                                                             </label>
@@ -347,7 +348,7 @@ $domain = api_get_path(WEB_PATH);
                                                             <input type="radio" id="edit-type-8" name="aioa_icon_type" value="aioa-icon-type-8"
                                                                 class="form-radio" />
                                                             <label for="edit-type-8" class="option">
-                                                                <img src="https://www.skynettechnologies.com/sites/default/files/aioa-icon-type-8.svg"
+                                                                <img src="images/icons/aioa-icon-type-8.svg"
                                                                     width="65" height="65" style="height: 65px;" />
                                                                 <span class="visually-hidden">Type 8</span>
                                                             </label>
@@ -359,7 +360,7 @@ $domain = api_get_path(WEB_PATH);
                                                             <input type="radio" id="edit-type-9" name="aioa_icon_type" value="aioa-icon-type-9"
                                                                 class="form-radio" />
                                                             <label for="edit-type-9" class="option">
-                                                                <img src="https://www.skynettechnologies.com/sites/default/files/aioa-icon-type-9.svg"
+                                                                <img src="images/icons/aioa-icon-type-9.svg"
                                                                     width="65" height="65" style="height: 65px;" />
                                                                 <span class="visually-hidden">Type 9</span>
                                                             </label>
@@ -371,7 +372,7 @@ $domain = api_get_path(WEB_PATH);
                                                             <input type="radio" id="edit-type-10" name="aioa_icon_type" value="aioa-icon-type-10"
                                                                 class="form-radio" />
                                                             <label for="edit-type-10" class="option">
-                                                                <img src="https://www.skynettechnologies.com/sites/default/files/aioa-icon-type-10.svg"
+                                                                <img src="images/icons/aioa-icon-type-10.svg"
                                                                     width="65" height="65" style="height: 65px;" />
                                                                 <span class="visually-hidden">Type 10</span>
                                                             </label>
@@ -383,7 +384,7 @@ $domain = api_get_path(WEB_PATH);
                                                             <input type="radio" id="edit-type-11" name="aioa_icon_type" value="aioa-icon-type-11"
                                                                 class="form-radio" />
                                                             <label for="edit-type-11" class="option">
-                                                                <img src="https://www.skynettechnologies.com/sites/default/files/aioa-icon-type-11.svg"
+                                                                <img src="images/icons/aioa-icon-type-11.svg"
                                                                     width="65" height="65" style="height: 65px;" />
                                                                 <span class="visually-hidden">Type 11</span>
                                                             </label>
@@ -395,7 +396,7 @@ $domain = api_get_path(WEB_PATH);
                                                             <input type="radio" id="edit-type-12" name="aioa_icon_type" value="aioa-icon-type-12"
                                                                 class="form-radio" />
                                                             <label for="edit-type-12" class="option">
-                                                                <img src="https://www.skynettechnologies.com/sites/default/files/aioa-icon-type-12.svg"
+                                                                <img src="images/icons/aioa-icon-type-12.svg"
                                                                     width="65" height="65" style="height: 65px;" />
                                                                 <span class="visually-hidden">Type 12</span>
                                                             </label>
@@ -407,7 +408,7 @@ $domain = api_get_path(WEB_PATH);
                                                             <input type="radio" id="edit-type-13" name="aioa_icon_type" value="aioa-icon-type-13"
                                                                 class="form-radio" />
                                                             <label for="edit-type-13" class="option">
-                                                                <img src="https://www.skynettechnologies.com/sites/default/files/aioa-icon-type-13.svg"
+                                                                <img src="images/icons/aioa-icon-type-13.svg"
                                                                     width="65" height="65" style="height: 65px;" />
                                                                 <span class="visually-hidden">Type 13</span>
                                                             </label>
@@ -419,7 +420,7 @@ $domain = api_get_path(WEB_PATH);
                                                             <input type="radio" id="edit-type-14" name="aioa_icon_type" value="aioa-icon-type-14"
                                                                 class="form-radio" />
                                                             <label for="edit-type-14" class="option">
-                                                                <img src="https://www.skynettechnologies.com/sites/default/files/aioa-icon-type-14.svg"
+                                                                <img src="images/icons/aioa-icon-type-14.svg"
                                                                     width="65" height="65" style="height: 65px;" />
                                                                 <span class="visually-hidden">Type 14</span>
                                                             </label>
@@ -431,7 +432,7 @@ $domain = api_get_path(WEB_PATH);
                                                             <input type="radio" id="edit-type-15" name="aioa_icon_type" value="aioa-icon-type-15"
                                                                 class="form-radio" />
                                                             <label for="edit-type-15" class="option">
-                                                                <img src="https://www.skynettechnologies.com/sites/default/files/aioa-icon-type-15.svg"
+                                                                <img src="images/icons/aioa-icon-type-15.svg"
                                                                     width="65" height="65" style="height: 65px;" />
                                                                 <span class="visually-hidden">Type 15</span>
                                                             </label>
@@ -443,7 +444,7 @@ $domain = api_get_path(WEB_PATH);
                                                             <input type="radio" id="edit-type-16" name="aioa_icon_type" value="aioa-icon-type-16"
                                                                 class="form-radio" />
                                                             <label for="edit-type-16" class="option">
-                                                                <img src="https://www.skynettechnologies.com/sites/default/files/aioa-icon-type-16.svg"
+                                                                <img src="images/icons/aioa-icon-type-16.svg"
                                                                     width="65" height="65" style="height: 65px;" />
                                                                 <span class="visually-hidden">Type 16</span>
                                                             </label>
@@ -455,7 +456,7 @@ $domain = api_get_path(WEB_PATH);
                                                             <input type="radio" id="edit-type-17" name="aioa_icon_type" value="aioa-icon-type-17"
                                                                 class="form-radio" />
                                                             <label for="edit-type-17" class="option">
-                                                                <img src="https://www.skynettechnologies.com/sites/default/files/aioa-icon-type-17.svg"
+                                                                <img src="images/icons/aioa-icon-type-17.svg"
                                                                     width="65" height="65" style="height: 65px;" />
                                                                 <span class="visually-hidden">Type 17</span>
                                                             </label>
@@ -467,7 +468,7 @@ $domain = api_get_path(WEB_PATH);
                                                             <input type="radio" id="edit-type-18" name="aioa_icon_type" value="aioa-icon-type-18"
                                                                 class="form-radio" />
                                                             <label for="edit-type-18" class="option">
-                                                                <img src="https://www.skynettechnologies.com/sites/default/files/aioa-icon-type-18.svg"
+                                                                <img src="images/icons/aioa-icon-type-18.svg"
                                                                     width="65" height="65" style="height: 65px;" />
                                                                 <span class="visually-hidden">Type 18</span>
                                                             </label>
@@ -479,7 +480,7 @@ $domain = api_get_path(WEB_PATH);
                                                             <input type="radio" id="edit-type-19" name="aioa_icon_type" value="aioa-icon-type-19"
                                                                 class="form-radio" />
                                                             <label for="edit-type-19" class="option">
-                                                                <img src="https://www.skynettechnologies.com/sites/default/files/aioa-icon-type-19.svg"
+                                                                <img src="images/icons/aioa-icon-type-19.svg"
                                                                     width="65" height="65" style="height: 65px;" />
                                                                 <span class="visually-hidden">Type 19</span>
                                                             </label>
@@ -491,7 +492,7 @@ $domain = api_get_path(WEB_PATH);
                                                             <input type="radio" id="edit-type-20" name="aioa_icon_type" value="aioa-icon-type-20"
                                                                 class="form-radio" />
                                                             <label for="edit-type-20" class="option">
-                                                                <img src="https://www.skynettechnologies.com/sites/default/files/aioa-icon-type-20.svg"
+                                                                <img src="images/icons/aioa-icon-type-20.svg"
                                                                     width="65" height="65" style="height: 65px;" />
                                                                 <span class="visually-hidden">Type 20</span>
                                                             </label>
@@ -503,7 +504,7 @@ $domain = api_get_path(WEB_PATH);
                                                             <input type="radio" id="edit-type-21" name="aioa_icon_type" value="aioa-icon-type-21"
                                                                 class="form-radio" />
                                                             <label for="edit-type-21" class="option">
-                                                                <img src="https://www.skynettechnologies.com/sites/default/files/aioa-icon-type-21.svg"
+                                                                <img src="images/icons/aioa-icon-type-21.svg"
                                                                     width="65" height="65" style="height: 65px;" />
                                                                 <span class="visually-hidden">Type 21</span>
                                                             </label>
@@ -515,7 +516,7 @@ $domain = api_get_path(WEB_PATH);
                                                             <input type="radio" id="edit-type-22" name="aioa_icon_type" value="aioa-icon-type-22"
                                                                 class="form-radio" />
                                                             <label for="edit-type-22" class="option">
-                                                                <img src="https://www.skynettechnologies.com/sites/default/files/aioa-icon-type-22.svg"
+                                                                <img src="images/icons/aioa-icon-type-22.svg"
                                                                     width="65" height="65" style="height: 65px;" />
                                                                 <span class="visually-hidden">Type 22</span>
                                                             </label>
@@ -527,7 +528,7 @@ $domain = api_get_path(WEB_PATH);
                                                             <input type="radio" id="edit-type-23" name="aioa_icon_type" value="aioa-icon-type-23"
                                                                 class="form-radio" />
                                                             <label for="edit-type-23" class="option">
-                                                                <img src="https://www.skynettechnologies.com/sites/default/files/aioa-icon-type-23.svg"
+                                                                <img src="images/icons/aioa-icon-type-23.svg"
                                                                     width="65" height="65" style="height: 65px;" />
                                                                 <span class="visually-hidden">Type 23</span>
                                                             </label>
@@ -539,7 +540,7 @@ $domain = api_get_path(WEB_PATH);
                                                             <input type="radio" id="edit-type-24" name="aioa_icon_type" value="aioa-icon-type-24"
                                                                 class="form-radio" />
                                                             <label for="edit-type-24" class="option">
-                                                                <img src="https://www.skynettechnologies.com/sites/default/files/aioa-icon-type-24.svg"
+                                                                <img src="images/icons/aioa-icon-type-24.svg"
                                                                     width="65" height="65" style="height: 65px;" />
                                                                 <span class="visually-hidden">Type 24</span>
                                                             </label>
@@ -551,7 +552,7 @@ $domain = api_get_path(WEB_PATH);
                                                             <input type="radio" id="edit-type-25" name="aioa_icon_type" value="aioa-icon-type-25"
                                                                 class="form-radio" />
                                                             <label for="edit-type-25" class="option">
-                                                                <img src="https://www.skynettechnologies.com/sites/default/files/aioa-icon-type-25.svg"
+                                                                <img src="images/icons/aioa-icon-type-25.svg"
                                                                     width="65" height="65" style="height: 65px;" />
                                                                 <span class="visually-hidden">Type 25</span>
                                                             </label>
@@ -563,7 +564,7 @@ $domain = api_get_path(WEB_PATH);
                                                             <input type="radio" id="edit-type-26" name="aioa_icon_type" value="aioa-icon-type-26"
                                                                 class="form-radio" />
                                                             <label for="edit-type-26" class="option">
-                                                                <img src="https://www.skynettechnologies.com/sites/default/files/aioa-icon-type-26.svg"
+                                                                <img src="images/icons/aioa-icon-type-26.svg"
                                                                     width="65" height="65" style="height: 65px;" />
                                                                 <span class="visually-hidden">Type 26</span>
                                                             </label>
@@ -575,7 +576,7 @@ $domain = api_get_path(WEB_PATH);
                                                             <input type="radio" id="edit-type-27" name="aioa_icon_type" value="aioa-icon-type-27"
                                                                 class="form-radio" />
                                                             <label for="edit-type-27" class="option">
-                                                                <img src="https://www.skynettechnologies.com/sites/default/files/aioa-icon-type-27.svg"
+                                                                <img src="images/icons/aioa-icon-type-27.svg"
                                                                     width="65" height="65" style="height: 65px;" />
                                                                 <span class="visually-hidden">Type 27</span>
                                                             </label>
@@ -587,7 +588,7 @@ $domain = api_get_path(WEB_PATH);
                                                             <input type="radio" id="edit-type-28" name="aioa_icon_type" value="aioa-icon-type-28"
                                                                 class="form-radio" />
                                                             <label for="edit-type-28" class="option">
-                                                                <img src="https://www.skynettechnologies.com/sites/default/files/aioa-icon-type-28.svg"
+                                                                <img src="images/icons/aioa-icon-type-28.svg"
                                                                     width="65" height="65" style="height: 65px;" />
                                                                 <span class="visually-hidden">Type 28</span>
                                                             </label>
@@ -599,7 +600,7 @@ $domain = api_get_path(WEB_PATH);
                                                             <input type="radio" id="edit-type-29" name="aioa_icon_type" value="aioa-icon-type-29"
                                                                 class="form-radio" />
                                                             <label for="edit-type-29" class="option">
-                                                                <img src="https://www.skynettechnologies.com/sites/default/files/aioa-icon-type-29.svg"
+                                                                <img src="images/icons/aioa-icon-type-29.svg"
                                                                     width="65" height="65" style="height: 65px;" />
                                                                 <span class="visually-hidden">Type 29</span>
                                                             </label>
@@ -646,7 +647,7 @@ $domain = api_get_path(WEB_PATH);
                                                             <input type="radio" id="edit-size-big" name="aioa_icon_size" value="aioa-big-icon"
                                                                 class="form-radio" />
                                                             <label for="edit-size-big" class="option">
-                                                                <img src="https://www.skynettechnologies.com/sites/default/files/aioa-icon-type-1.svg"
+                                                                <img src="images/icons/aioa-icon-type-1.svg"
                                                                     width="75" height="75" style="height: 75px;" class="iconimg" />
                                                                 <span class="visually-hidden">Big</span>
                                                             </label>
@@ -658,7 +659,7 @@ $domain = api_get_path(WEB_PATH);
                                                             <input type="radio" id="edit-size-medium" checked="" name="aioa_icon_size"
                                                                 value="aioa-medium-icon" class="form-radio" />
                                                             <label for="edit-size-medium" class="option">
-                                                                <img src="https://www.skynettechnologies.com/sites/default/files/aioa-icon-type-1.svg"
+                                                                <img src="images/icons/aioa-icon-type-1.svg"
                                                                     width="65" height="65" style="height: 65px;" class="iconimg" />
                                                                 <span class="visually-hidden">Medium</span>
                                                             </label>
@@ -670,7 +671,7 @@ $domain = api_get_path(WEB_PATH);
                                                             <input type="radio" id="edit-size-default" name="aioa_icon_size" value="aioa-default-icon"
                                                                 class="form-radio" />
                                                             <label for="edit-size-default" class="option">
-                                                                <img src="https://www.skynettechnologies.com/sites/default/files/aioa-icon-type-1.svg"
+                                                                <img src="images/icons/aioa-icon-type-1.svg"
                                                                     width="55" height="55" style="height: 55px;" class="iconimg" />
                                                                 <span class="visually-hidden">Default</span>
                                                             </label>
@@ -682,7 +683,7 @@ $domain = api_get_path(WEB_PATH);
                                                             <input type="radio" id="edit-size-small" name="aioa_icon_size" value="aioa-small-icon"
                                                                 class="form-radio" />
                                                             <label for="edit-size-small" class="option">
-                                                                <img src="https://www.skynettechnologies.com/sites/default/files/aioa-icon-type-1.svg"
+                                                                <img src="images/icons/aioa-icon-type-1.svg"
                                                                     width="45" height="45" style="height: 45px;" class="iconimg" />
                                                                 <span class="visually-hidden">Small</span>
                                                             </label>
@@ -694,7 +695,7 @@ $domain = api_get_path(WEB_PATH);
                                                             <input type="radio" id="edit-size-extra-small" name="aioa_icon_size"
                                                                 value="aioa-extra-small-icon" class="form-radio" />
                                                             <label for="edit-size-extra-small" class="option">
-                                                                <img src="https://www.skynettechnologies.com/sites/default/files/aioa-icon-type-1.svg"
+                                                                <img src="images/icons/aioa-icon-type-1.svg"
                                                                     width="35" height="35" style="height: 35px;" class="iconimg" />
                                                                 <span class="visually-hidden">Extra Small</span>
                                                             </label>
@@ -713,7 +714,7 @@ $domain = api_get_path(WEB_PATH);
                                                             <input type="radio" id="edit-size-big" name="aioa_icon_size_mb" value="aioa-big-icon-mb"
                                                                 class="form-radio" />
                                                             <label for="edit-size-big" class="option">
-                                                                <img src="https://www.skynettechnologies.com/sites/default/files/aioa-icon-type-1.svg"
+                                                                <img src="images/icons/aioa-icon-type-1.svg"
                                                                     width="75" height="75" />
                                                                 <span class="visually-hidden">Big</span>
                                                             </label>
@@ -725,7 +726,7 @@ $domain = api_get_path(WEB_PATH);
                                                             <input type="radio" id="edit-size-medium" checked="" name="aioa_icon_size_mb"
                                                                 value="aioa-medium-icon-mb" class="form-radio" />
                                                             <label for="edit-size-medium" class="option">
-                                                                <img src="https://www.skynettechnologies.com/sites/default/files/aioa-icon-type-1.svg"
+                                                                <img src="images/icons/aioa-icon-type-1.svg"
                                                                     width="65" height="65" />
                                                                 <span class="visually-hidden">Medium</span>
                                                             </label>
@@ -737,7 +738,7 @@ $domain = api_get_path(WEB_PATH);
                                                             <input type="radio" id="edit-size-default" name="aioa_icon_size_mb"
                                                                 value="aioa-default-icon-mb" class="form-radio" />
                                                             <label for="edit-size-default" class="option">
-                                                                <img src="https://www.skynettechnologies.com/sites/default/files/aioa-icon-type-1.svg"
+                                                                <img src="images/icons/aioa-icon-type-1.svg"
                                                                     width="55" height="55" />
                                                                 <span class="visually-hidden">Default</span>
                                                             </label>
@@ -749,7 +750,7 @@ $domain = api_get_path(WEB_PATH);
                                                             <input type="radio" id="edit-size-small" name="aioa_icon_size_mb" value="aioa-small-icon-mb"
                                                                 class="form-radio" />
                                                             <label for="edit-size-small" class="option">
-                                                                <img src="https://www.skynettechnologies.com/sites/default/files/aioa-icon-type-1.svg"
+                                                                <img src="images/icons/aioa-icon-type-1.svg"
                                                                     width="45" height="45" />
                                                                 <span class="visually-hidden">Small</span>
                                                             </label>
@@ -761,7 +762,7 @@ $domain = api_get_path(WEB_PATH);
                                                             <input type="radio" id="edit-size-extra-small" name="aioa_icon_size_mb"
                                                                 value="aioa-extra-small-icon-mb" class="form-radio" />
                                                             <label for="edit-size-extra-small" class="option">
-                                                                <img src="https://www.skynettechnologies.com/sites/default/files/aioa-icon-type-1.svg"
+                                                                <img src="images/icons/aioa-icon-type-1.svg"
                                                                     width="35" height="35" />
                                                                 <span class="visually-hidden">Extra Small</span>
                                                             </label>
@@ -797,7 +798,9 @@ $domain = api_get_path(WEB_PATH);
         </div>
         </div>
         <script src="js/bootstrap.bundle.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+        <script src="js/jquery.min.js"></script>
+
 
     <?php } ?>
 
@@ -840,6 +843,7 @@ $domain = api_get_path(WEB_PATH);
             // dataType: 'json',
             success: function(data) {
                 result = JSON.parse(data)
+
                 is_widget_custom_position = result.Data.is_widget_custom_position
                 is_widget_custom_size = result.Data.is_widget_custom_size
                 const settings = {
@@ -965,7 +969,7 @@ $domain = api_get_path(WEB_PATH);
             }
         });
 
-        const iconImg = `https://www.skynettechnologies.com/sites/default/files/${settings.widget_icon_type}.svg`;
+        const iconImg = `images/icons/${settings.widget_icon_type}.svg`;
         $(".iconimg").attr("src", iconImg);
 
         const widget_icon_size_custom = document.getElementById("widget_icon_size_custom");
@@ -1092,6 +1096,21 @@ $domain = api_get_path(WEB_PATH);
         } else if (y_position_direction === "cust-pos-to-the-upper") {
             widget_position_top = custom_position_y;
         }
+
+
+        if (widget_icon_size_custom < 20 && is_widget_custom_size == 1) {
+            hideLoader()
+            alert('Please enter Select exact icon size minumium 20');
+            return;
+        }
+
+        if (widget_icon_size_custom > 150 && is_widget_custom_size == 1) {
+            hideLoader()
+            alert('Please enter Select exact icon size maximum 150');
+            return;
+        }
+
+
         // Update Widget Setting on ADA dashboard
         var url = 'https://ada.skynettechnologies.us/api/widget-setting-update-platform';
 
@@ -1115,7 +1134,7 @@ $domain = api_get_path(WEB_PATH);
             url: url,
             type: 'POST',
             data: params,
-            dataType: 'json', 
+            dataType: 'json',
             success: function(response) {
 
                 // calling plugin function to session session data
@@ -1123,7 +1142,7 @@ $domain = api_get_path(WEB_PATH);
                     url: 'route.php?action=settingsUpdated',
                     type: 'POST',
                     data: params,
-                    dataType: 'json', 
+                    dataType: 'json',
                     success: function(response) {
                         // reload the page 
                         location.reload();
@@ -1144,13 +1163,49 @@ $domain = api_get_path(WEB_PATH);
 
     // function to show the loader
     function showLoader() {
-        $('#load').removeClass('loader-removed'); 
+        $('#load').removeClass('loader-removed');
     }
 
     // function to hide the loader
     function hideLoader() {
-        $('#load').addClass('loader-removed'); 
+        $('#load').addClass('loader-removed');
     }
 </script>
+
+<script>
+    $('input[name="aioa_icon_type"]').on('change', function() {
+        const selectedValue = $(this).val();
+
+        console.log("selecetd:" + selectedValue)
+
+        // Update all images with matching data-radio value
+        $('.iconimg').each(function(index) {
+            const imgRadio = $(this).data('radio');
+            // if (imgRadio == selectedValue) {
+            // Update image src
+            $(this).attr('src', 'images/icons/' + selectedValue + '.svg');
+            // }
+        });
+    });
+</script>
+<!-- <script>
+    $('input[name="aioa_icon_type"]').on('change', function() {
+        // Optional: reset all images first
+        $('label.option img').each(function() {
+            const value = $(this).closest('label').attr('for').replace('edit-size-', '');
+            $(this).attr('src', 'images/default-' + value + '.svg');
+        });
+
+        // Get the selected radio ID
+        const selectedId = $(this).attr('id');
+
+        // Find the associated label and image
+        const label = $('label.option[for="' + selectedId + '"]');
+        const img = label.find('img');
+
+        // Set the selected image
+        img.attr('src', 'images/selected-' + selectedId.replace('edit-size-', '') + '.svg');
+    });
+</script> -->
 
 </html>

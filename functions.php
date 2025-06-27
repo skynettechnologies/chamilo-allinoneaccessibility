@@ -15,47 +15,59 @@ class SkynetWidget
         $theme = "default";
 
         if ($theme) {
-            $themeName = $theme;
-            $layoutFile = api_get_path(SYS_PATH) . 'main/template/' . $themeName . '/layout/head.tpl'; // Adjust if needed
 
-            if (file_exists($layoutFile)) {
 
-                $content = file_get_contents($layoutFile);
+            $overridesHead = api_get_path(SYS_PATH) . 'main/template/overrides/layout/head.tpl';
+            $templateHead = api_get_path(SYS_PATH) . 'main/template/' . $theme . '/layout/head.tpl';
 
-                if (strpos(
-                    $content,
-                    $scriptContentToAdd
-                ) === false) {
-                    // Assuming </head> is still the closing tag
-                    // $newContent = str_replace('</head>', $scriptContentToAdd . "\n</head>", $content);
+            if (is_file($overridesHead) && is_writable($overridesHead)) {
+                // Override file exists, modify it
+                $content = file_get_contents($overridesHead);
+            } elseif (is_file($templateHead) && is_readable($templateHead)) {
+                // Override file does not exist, copy and modify from theme
+                $content = file_get_contents($templateHead);
+            } else {
+                echo 'Cannot find or read any head.tpl file.';
+                return;
+            }
+
+            // Check if script is already injected
+            if (strpos($content, $scriptContentToAdd) === false) {
+                if (strpos($content, '{{ extra_headers }}') !== false) {
                     $newContent = str_replace(
                         '{{ extra_headers }}',
                         '{{ extra_headers }}' . "\n" . $scriptContentToAdd,
                         $content
                     );
-
-                    if ($content !== $newContent) {
-                        if (file_put_contents($layoutFile, $newContent)) {
-                            // Script added successfully during installation
-                            //    return true;
-                        } else {
-                            echo ('all_in_one_accessibility: Failed to write to layout file during installation.');
-                            //    return false;
-                        }
-                    } else {
-                        // return true; // Script already present
-                    }
                 } else {
-                    //  return true; // Script already exists
+                    // Fallback: inject before </head> if {{ extra_headers }} not found
+                    $newContent = str_replace(
+                        '</head>',
+                        $scriptContentToAdd . "\n</head>",
+                        $content
+                    );
+                }
+
+                // Ensure override directory exists
+                $overrideDir = dirname($overridesHead);
+                if (!is_dir($overrideDir)) {
+                    mkdir($overrideDir, 0775, true);
+                }
+
+                if (file_put_contents($overridesHead, $newContent)) {
+                    echo 'head.tpl override created or updated successfully.';
+                } else {
+                    echo 'Failed to write to override head.tpl.';
                 }
             } else {
-                echo ('all_in_one_accessibility: Layout file not found for theme: ' . $themeName);
-                //   return false;
+                echo 'Script already present in head.tpl. No changes made.';
             }
         } else {
             echo ('all_in_one_accessibility: Could not determine the active theme during installation.');
             //    return false;
         }
+
+        self::getWidgetInfo();
     }
 
     public static function removeScript()
@@ -66,29 +78,54 @@ class SkynetWidget
         $theme = "default";
 
         if ($theme) {
-            $themeName = $theme;
-            $layoutFile = api_get_path(SYS_PATH) . 'main/template/' . $themeName . '/layout/head.tpl'; // Adjust if needed
 
-            if (file_exists($layoutFile)) {
-                // Get the content of the layout file
-                $content = file_get_contents($layoutFile);
 
-                // Check if the script tag exists in the content
+            $overridesHead = api_get_path(SYS_PATH) . 'main/template/overrides/layout/head.tpl';
+            $templateHead = api_get_path(SYS_PATH) . 'main/template/' . $theme . '/layout/head.tpl';
+
+            // Step 1: Prefer modifying the override file
+            if (file_exists($overridesHead) && is_writable($overridesHead)) {
+                $content = file_get_contents($overridesHead);
+
                 if (strpos($content, $scriptContentToRemove) !== false) {
-                    // Remove the script tag from the content
                     $newContent = str_replace($scriptContentToRemove, '', $content);
 
-                    // If the content was modified, write the changes back
                     if ($content !== $newContent) {
-                        if (file_put_contents($layoutFile, $newContent)) {
+                        if (file_put_contents($overridesHead, $newContent)) {
+                            echo 'Script removed from override head.tpl.';
                         } else {
-                            error_log('all_in_one_accessibility: Failed to write to layout file during removal.');
+                            error_log('Failed to write to override head.tpl during script removal.');
                         }
                     }
                 } else {
+                    echo 'Script not found in override head.tpl.';
+                }
+            }
+            // Step 2: If no override exists, fallback to theme file (NOT recommended, but optional)
+            elseif (file_exists($templateHead) && is_writable($templateHead)) {
+                $content = file_get_contents($templateHead);
+
+                if (strpos($content, $scriptContentToRemove) !== false) {
+                    $newContent = str_replace($scriptContentToRemove, '', $content);
+
+                    if ($content !== $newContent) {
+                        // Write to override file instead of theme file to keep things upgrade-safe
+                        $overrideDir = dirname($overridesHead);
+                        if (!is_dir($overrideDir)) {
+                            mkdir($overrideDir, 0775, true);
+                        }
+
+                        if (file_put_contents($overridesHead, $newContent)) {
+                            echo 'Override file created with script removed.';
+                        } else {
+                            error_log('Failed to create override file during script removal.');
+                        }
+                    }
+                } else {
+                    echo 'Script not found in theme head.tpl.';
                 }
             } else {
-                error_log('all_in_one_accessibility: Layout file not found for theme: ' . $themeName);
+                error_log('No suitable head.tpl file found to remove script.');
             }
         } else {
             error_log('all_in_one_accessibility: Could not determine the active theme during removal.');
@@ -115,82 +152,76 @@ class SkynetWidget
         }
 
         $archive_path = api_get_path(SYS_ARCHIVE_PATH);
-        $htaccess = <<<TEXT
-                        <IfModule mod_authz_core.c>
-                            Require all denied
-                        </IfModule>
-                        <IfModule !mod_authz_core.c>
-                            Order deny,allow
-                            Deny from all
-                        </IfModule>
-                        # pChart generated files should be allowed
-                        <FilesMatch "^[0-9a-f]+$">
-                            order allow,deny
-                            allow from all
-                        </FilesMatch>
-                        php_flag engine off
-                        TEXT;
 
         $result = rmdirr($archive_path, true, true);
 
-        if (!empty($htaccess)) {
-            @file_put_contents($archive_path . '/.htaccess', $htaccess);
-        }
+        rmdirr(api_get_path(SYS_ARCHIVE_PATH) . 'twig/', true, true);
     }
+
 
     public static function getWidgetInfo()
     {
+        try {
+            $user_id = api_get_user_id();
+            $user_info = api_get_user_info($user_id);
+            $domain = api_get_path(WEB_PATH);
 
-        $user_id = api_get_user_id();
-        $user_info = api_get_user_info($user_id);
-        $domain = api_get_path(WEB_PATH);
+            $now = new DateTime('now', new DateTimeZone('UTC'));
+            $dateTime = $now->format('Y-m-d\TH:i:sO');
 
-        $now = new DateTime('now', new DateTimeZone('UTC'));
-        $dateTime = $now->format('Y-m-d\TH:i:sO');
+            $curl = curl_init();
 
-        $curl = curl_init();
+            curl_setopt_array($curl, array(
+                CURLOPT_URL => 'https://ada.skynettechnologies.us/api/add-user-domain',
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_ENCODING => '',
+                CURLOPT_MAXREDIRS => 10,
+                CURLOPT_TIMEOUT => 0,
+                CURLOPT_FOLLOWLOCATION => true,
+                CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                CURLOPT_CUSTOMREQUEST => 'POST',
+                CURLOPT_POSTFIELDS => array(
+                    'name'              => '',
+                    'company_name'      => '',
+                    'website'           => base64_encode($domain),
+                    'package_type'      => 'free-widget',
+                    'start_date'        => $dateTime,
+                    'end_date'          => '',
+                    'price'             => '',
+                    'discount_price'    => '0',
+                    'platform'          => 'Craft',
+                    'api_key'           => '',
+                    'is_trial_period'   => '',
+                    'is_free_widget'    => '1',
+                    'bill_address'      => '',
+                    'country'           => '',
+                    'state'             => '',
+                    'city'              => '',
+                    'post_code'         => '',
+                    'transaction_id'    => '',
+                    'subscr_id'         => '',
+                    'payment_source'    => ''
+                ),
+            ));
 
-        curl_setopt_array($curl, array(
-            CURLOPT_URL => 'https://ada.skynettechnologies.us/api/add-user-domain',
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_ENCODING => '',
-            CURLOPT_MAXREDIRS => 10,
-            CURLOPT_TIMEOUT => 0,
-            CURLOPT_FOLLOWLOCATION => true,
-            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-            CURLOPT_CUSTOMREQUEST => 'POST',
-            CURLOPT_POSTFIELDS => array(
-                'name'              => $user_info['complete_name'],
-                'email'             => $user_info['email'],
-                'company_name'      => '',
-                'website'           => base64_encode($domain),
-                'package_type'      => 'free-widget',
-                'start_date'        => $dateTime,
-                'end_date'          => '',
-                'price'             => '',
-                'discount_price'    => '0',
-                'platform'          => 'Craft',
-                'api_key'           => '',
-                'is_trial_period'   => '',
-                'is_free_widget'    => '1',
-                'bill_address'      => '',
-                'country'           => '',
-                'state'             => '',
-                'city'              => '',
-                'post_code'         => '',
-                'transaction_id'    => '',
-                'subscr_id'         => '',
-                'payment_source'    => ''
-            ),
-        ));
+            curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false); // ⚠️ For development only
 
-        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);  // ⚠️ Don't use false in production
+            $response = curl_exec($curl);
+            $curlInfo = curl_getinfo($curl);
 
-        $response = curl_exec($curl);
-        curl_close($curl);
+            if ($response === false) {
+                $error = curl_error($curl);
+                throw new Exception("cURL error: $error");
+            }
 
-        return json_decode($response);
+            curl_close($curl);
+
+            return json_decode($response);
+        } catch (Exception $e) {
+            return null;
+        }
     }
+
 
     public static function fetchWidgetSettings()
     {
@@ -215,7 +246,16 @@ class SkynetWidget
         $response = curl_exec($curl);
 
         curl_close($curl);
-        return $response;
+
+        $res = json_decode($response, true);
+
+        if (empty($res['Data'])) {
+            self::getWidgetInfo();
+            sleep(1);
+            self::fetchWidgetSettings();
+        } else {
+            return json_encode($res);
+        }
     }
 
     public static function settingsUpdated()
